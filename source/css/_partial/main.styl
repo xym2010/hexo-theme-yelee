@@ -81,6 +81,10 @@
     font-family: Roboto, "Roboto", serif;
     font-size: 30px;
     transition: 0.3s;
+    &:hover {
+        -webkit-animation: swing 1s;
+        animation: swing 1s;
+    }
 }
 #header{
     width:100%;
@@ -123,8 +127,10 @@
             background: white;
             border: 5px solid #88acdb;
             box-shadow: 0 0 1.5em #88acdb;
-            animation: profilepic .15s linear infinite alternate;
-            -webkit-animation: profilepic .15s linear infinite alternate; 
+            //animation: profilepic .15s linear infinite alternate;
+            //-webkit-animation: profilepic .15s linear infinite alternate; 
+            -webkit-animation: rubberBand 1s;
+            animation: rubberBand 1s;
         }
         @keyframes profilepic {
             0% {
@@ -147,6 +153,10 @@
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
+        &:hover {
+            -webkit-animation: shake 0.5s;
+            animation: shake 0.5s;
+        }    
     }
     .header-menu{
         menu-line-height = 28px
