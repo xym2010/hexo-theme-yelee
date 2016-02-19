@@ -126,7 +126,7 @@ animate: true
 
 # Load jQuery UI to style tooltips
 # 工具提示框样式美化
-jquery_ui: false
+jquery_ui: true
 
 # >>> Small features | 小功能设置 <<<
 

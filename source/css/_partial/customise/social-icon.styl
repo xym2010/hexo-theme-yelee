@@ -23,7 +23,8 @@
             margin-right 0
 
     img-logo = {
-        "新浪微博": #ecc260
+        //"新浪微博": #ecc260
+        "新浪微博": white
         "知乎": #0078d8
         "豆瓣": #06c611
         GitHub: white
@@ -61,7 +62,14 @@
                 _500px f26e #0099e5
 
     for i in font-logo
-        .{i[0]}:before
-            content '\' + i[1]
-        #{i[0]}
-            background i[2]
+        if i[0] == RSS
+            .{i[0]}:before
+                content '\' + i[1]
+                color transparent
+            #{i[0]}
+                background: url('/img/' + i[0] + '.png') center no-repeat white
+        else
+            .{i[0]}:before
+                content '\' + i[1]
+            #{i[0]}
+                background i[2]
